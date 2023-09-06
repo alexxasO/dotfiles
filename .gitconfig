@@ -1,0 +1,8 @@
+[user]
+	email = nellousan@hotmail.fr
+	name = Nell Fauveau
+[core]
+	editor = helix
+[pull]
+	reabse = false
+	rebase = false
