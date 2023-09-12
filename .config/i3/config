@@ -313,8 +313,9 @@ set $ws10 "10🎶"
 assign [class="(?i)code-oss"] $ws1
 assign [class="(?i)firefox"] $ws2
 assign [class="notion-snap"] $ws7
+assign [class="microsoft teams - preview"] $ws8
 assign [class="discord"] $ws9
-assign [class="spotify"] $ws10
+assign [class="Spotify"] $ws10
 #assign [class="Thunar"] $ws3
 #assign [class="Thunderbird"] $ws4
 #assign [class="TelegramDesktop"] $ws5
@@ -324,7 +325,7 @@ assign [class="spotify"] $ws10
 #for_window [class=(?i)firefox] focus
 #for_window [class=Thunar] focus
 #for_window [class=Thunderbird] focus
-#for_window [class=TelegramDesktop] focus
+#for_window [class=TelegramDesktoo] focus
 
 ##############
 # compositor #
@@ -562,15 +563,15 @@ strip_workspace_numbers yes
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
 
 bindsym $mod+d exec rofi -modi drun -show drun \
-#		-config ~/.config/rofi/rofidmenu.rasi
+		-config ~/.config/rofi/rofidmenu.rasi
 
 #bindsym F9 exec rofi -modi drun -show drun \
-#		-config ~/.config/rofi/rofidmenu.rasi
+		-config ~/.config/rofi/rofidmenu.rasi
 
 ## rofi bindings for window menu ($mod+t /F10 optional disabled)
 
 bindsym $mod+t exec rofi -show window \
-#		-config ~/.config/rofi/rofidmenu.rasi
+		-config ~/.config/rofi/rofidmenu.rasi
 
 #bindsym F10 exec rofi -show window \
 #		-config ~/.config/rofi/rofidmenu.rasi
