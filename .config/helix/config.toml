@@ -1,4 +1,4 @@
-theme = "everforest_dark_fixed"
+theme = "everforest_dark"
 
 editor.bufferline = "multiple"
 
@@ -23,3 +23,9 @@ C-k = ["move_line_up", "move_line_up", "move_line_up", "move_line_up", "move_lin
 C-h = "move_prev_word_start"
 C-l = "move_next_word_start"
 
+# Cursor shape between modes
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
