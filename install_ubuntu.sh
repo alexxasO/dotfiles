@@ -43,3 +43,17 @@ echo "\033[1;32mAdditional packages installation complete!\033[0m"
 echo "\033[1;32mInstalling Betterlockscreen...\033[0m"
 
 wget https://raw.githubusercontent.com/betterlockscreen/betterlockscreen/main/install.sh -O - -q | sudo bash -s system
+
+echo "\033[1;32mBetterlockscreen installation complete!\033[0m"
+
+# Install libinput-gestures
+
+echo "\033[1;32mInstalling libinput-gestures...\033[0m"
+
+sudo apt-get install libinput-tools
+
+git clone https://github.com/bulletmark/libinput-gestures.git
+cd libinput-gestures
+sudo ./libinput-gestures-setup install
+
+echo "\033[1;32mlibinput-gestures installation complete!\033[0m"
