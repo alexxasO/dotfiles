@@ -1,0 +1,28 @@
+#!/bin/bash
+nb=0.1
+ 
+if [[ -e ~/.brightness ]]; then
+    while read lines || [[ -n "$lines" ]]; do
+        nbBrightness=($lines)
+    done < ~/.brightness
+fi
+ 
+if [ $1 == "-" ]; then
+    nbBrightness=`bc -l <<< "scale=2; $nbBrightness-$nb"`
+    if [[ -e ~/.brightness ]]; then
+        rm -f ~/.brightness
+        echo -e "$nbBrightness" >> ~/.brightness
+    else
+        echo -e "$nbBrightness" >> ~/.brightness
+    fi
+    xrandr --output eDP-1 --brightness $nbBrightness
+fi 
+if [ $1 == "+" ]; then
+    nbBrightness=`bc -l <<< "scale=2; $nbBrightness+$nb"`
+    if [[ -e ~/.brightness ]]; then
+        rm -f ~/.brightness
+        echo -e "$nbBrightness" >> ~/.brightness
+    else
+        echo -e "$nbBrightness" >> ~/.brightness
+    fi
+    xrandr --output eDP-1 --brightness $nbBrightnes

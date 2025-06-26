@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+#PICTURE=/tmp/i3lock.png
+SCREENSHOT="scrot -z $PICTURE"
+
+BLUR="5x4"
+
+PICTURE="/home/alexis/.papes-lock/forest.png"
+NEW_PIC="/tmp/i3lock.png"
+
+#$SCREENSHOT
+cp $PICTURE $NEW_PIC
+#convert $NEW_PIC -blur $BLUR $NEW_PIC
+i3lock -i $NEW_PIC -f
+rm $NEW_PIC
