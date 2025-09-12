@@ -171,13 +171,14 @@ bindsym $mod+r mode "resize"
 ######################################
 
 # start a terminal
-bindsym $mod+Return exec terminator --profile=i3
+bindsym $mod+Return exec xfce4-terminal
 
 # kill focused window
 bindsym $mod+Shift+a kill
 
-# exit-menu
-bindsym $mod+Shift+l exec ~/.config/i3/scripts/powermenu
+# exit-menu / powermenu
+# bindsym $mod+Shift+l exec ~/.config/i3/scripts/powermenu
+bindsym $mod+Shift+l exec --no-startup-id /home/alexis/.config/rofi/powermenu/type-4/powermenu.sh
 
 # Lock the system
 # lock with a picture:
@@ -560,13 +561,15 @@ strip_workspace_numbers yes
 #}
 
 #####################################
-# Application menu handled by rofi: #
+# Application menu handled by rofi / Launcher : #
 #####################################
 
 ## rofi bindings fancy application menu ($mod+d /F9 optional disabled)
 
-bindsym $mod+d exec rofi -modi drun -show drun \
-		-config ~/.config/rofi/rofidmenu.rasi
+# bindsym $mod+d exec rofi -modi drun -show drun \
+# 		-config ~/.config/rofi/rofidmenu.rasi
+
+bindsym $mod+d exec /home/alexis/.config/rofi/launchers/type-4/launcher.sh
 
 # bindsym F9 exec rofi -modi drun -show drun \
 # 		-config ~/.config/rofi/rofidmenu.rasi
@@ -589,6 +592,8 @@ bindsym $mod+t exec rofi -show window \
 
 bindsym $mod+c move workspace to output right
 bindsym $mod+x move workspace to output left
+bindsym $mod+u move workspace to output up
+bindsym $mod+i move workspace to output down
 
 exec xinput set-prop 10 321 1
 exec xinput set-prop 10 348 1
@@ -614,3 +619,6 @@ exec --no-startup-id caffeine
 # Transfer screen lock to betterlockscreen
 exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -u ~/.papes --blur 0.5 -- -f
 exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l dim
+
+bindsym $mod+Shift+v exec --no-startup-id /home/alexis/.config/rofi/applets/bin/volume.sh > /dev/null
+bindsym $mod+Shift+q exec --no-startup-id /home/alexis/.config/rofi/applets/bin/battery.sh > /dev/null

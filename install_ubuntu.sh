@@ -57,3 +57,11 @@ cd libinput-gestures
 sudo ./libinput-gestures-setup install
 
 echo "\033[1;32mlibinput-gestures installation complete!\033[0m"
+
+# Install Rofi customizations by adi90x
+
+cd /tmp
+git clone git@github.com:adi1090x/rofi.git
+cd rofi
+chmod +x setup.sh
+./setup.sh
