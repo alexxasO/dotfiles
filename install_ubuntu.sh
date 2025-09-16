@@ -1,3 +1,7 @@
+#!/bin/bash
+
+SCRIPT_DIR=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
+
 echo "\033[1;32mInstalling i3 desktop environment...\033[0m"
 
 sudo apt update && sudo apt install -y \
@@ -74,3 +78,8 @@ chmod +x setup.sh
 echo "\033[1;32mInstalling Polybar...\033[0m"
 
 sudo apt install -y polybar
+
+# Copy config files
+
+mkdir -p ~/.config
+cp -r $SCRIPT_DIR/.config/* ~/.config/
