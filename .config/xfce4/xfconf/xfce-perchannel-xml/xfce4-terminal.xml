@@ -2,7 +2,7 @@
 
 <channel name="xfce4-terminal" version="1.0">
   <property name="background-mode" type="string" value="TERMINAL_BACKGROUND_TRANSPARENT"/>
-  <property name="background-darkness" type="double" value="0.92000000000000004"/>
+  <property name="background-darkness" type="double" value="0.84999999999999998"/>
   <property name="color-foreground" type="string" value="#d3d3c6c6aaaa"/>
   <property name="color-background" type="string" value="#2e2d38383c3c"/>
   <property name="color-cursor-foreground" type="string" value="#FFFFFF"/>
@@ -41,7 +41,7 @@
   <property name="misc-right-click-action" type="string" value="TERMINAL_RIGHT_CLICK_ACTION_CONTEXT_MENU"/>
   <property name="scrolling-bar" type="string" value="TERMINAL_SCROLLBAR_NONE"/>
   <property name="scrolling-lines" type="uint" value="50000"/>
-  <property name="scrolling-unlimited" type="bool" value="false"/>
+  <property name="scrolling-unlimited" type="bool" value="true"/>
   <property name="tab-activity-color" type="string" value="#81813d3d9c9c"/>
   <property name="color-use-theme" type="bool" value="false"/>
   <property name="color-background-vary" type="bool" value="false"/>
