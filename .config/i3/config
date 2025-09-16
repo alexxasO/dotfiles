@@ -22,7 +22,9 @@
 # is used in the bar {} block below.
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango: Noto Sans Regular 10
+# font pango: Noto Sans Regular 10
+font pango:monospace 8
+
 
 # set the mod key to the winkey:
 set $mod Mod4
@@ -204,10 +206,10 @@ bindsym $mod+Shift+r restart
 # bindsym XF86MonBrightnessDown exec xbacklight -5 && notify-send "Brightness - $(xbacklight -get | cut -d '.' -f 1)%"
 
 # change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+b focus up
-bindsym $mod+o focus right
+# bindsym $mod+j focus left
+# bindsym $mod+k focus down
+# bindsym $mod+b focus up
+# bindsym $mod+o focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -217,8 +219,8 @@ bindsym $mod+Right focus right
 
 # move focused window
 bindsym $mod+Shift+j move left
-bindsym $mod+Shift+k move down
-bindsym $mod+Shift+b move up
+# bindsym $mod+Shift+k move down
+# bindsym $mod+Shift+b move up
 bindsym $mod+Shift+o move right
 
 # alternatively, you can use the cursor keys:
@@ -405,7 +407,6 @@ exec --no-startup-id xset s 480 dpms 600 600 600
 # https://wiki.archlinux.org/title/Session_lock#xautolock
 #exec --no-startup-id xautolock -time 60 -locker "systemctl suspend"
 
-
 # xscreensaver
 # https://www.jwz.org/xscreensaver
 #exec --no-startup-id xscreensaver --no-splash
@@ -501,33 +502,33 @@ client.urgent		    	$urgentred	$urgentred	$white		$yellowbrown	$yellowbrown
 
 # Start i3bar to display a workspace bar
 # (plus the system information i3status finds out, if available)
-bar {
-		font pango: Noto Sans Regular 10
-		status_command i3blocks -c ~/.config/i3/i3blocks.conf
-	    	position bottom
-#	    	i3bar_command i3bar --transparency
-# it could be that you have no primary display set: set one (xrandr --output <output> --primary)
-# reference: https://i3wm.org/docs/userguide.html#_tray_output
-		    tray_output primary
-		    tray_padding 0
+# bar {
+# 	font pango: Noto Sans Regular 10
+# 	status_command i3blocks -c ~/.config/i3/i3blocks.conf
+# 	position bottom
+# 	#	    	i3bar_command i3bar --transparency
+# 	# it could be that you have no primary display set: set one (xrandr --output <output> --primary)
+# 	# reference: https://i3wm.org/docs/userguide.html#_tray_output
+# 	tray_output primary
+# 	tray_padding 0
 
-# When strip_workspace_numbers is set to yes,
-# any workspace that has a name of the form
-# “[n][:][NAME]” will display only the name.
-strip_workspace_numbers yes
-##strip_workspace_name no
+# 	# When strip_workspace_numbers is set to yes,
+# 	# any workspace that has a name of the form
+# 	# “[n][:][NAME]” will display only the name.
+# 	strip_workspace_numbers yes
+# 	##strip_workspace_name no
 
-		    colors {
-		    separator          $purple
-		    background         $darkgrey
-		    statusline         $white
-#                          		border 		        bg		txt		indicator
-		focused_workspace	$mediumgrey	   	$grey		$darkgrey	$purple
-		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$purple
-		inactive_workspace	$darkgrey   		$darkgrey	$grey		$purple
-		urgent_workspace	$urgentred	    	$urgentred	$white		$purple
-	}
-}
+# 	colors {
+# 		separator          $purple
+# 		background         $darkgrey
+# 		statusline         $white
+# #                          		border 		        bg		txt		indicator
+# 		focused_workspace	$mediumgrey	   	$grey		$darkgrey	$purple
+# 		active_workspace	$lightblue      	$mediumgrey	$darkgrey	$purple
+# 		inactive_workspace	$darkgrey   		$darkgrey	$grey		$purple
+# 		urgent_workspace	$urgentred	    	$urgentred	$white		$purple
+# 	}
+# }
 
 # you can add different bars for multidisplay setups on each display:
 # set output HDMI-0 to the display you want the bar, --transparency can be set.
@@ -536,29 +537,29 @@ strip_workspace_numbers yes
 # #08052be6 --> e6=90%
 
 # bar {
-#	font pango: Noto Sans Regular 10
-#	status_command i3blocks -c ~/.config/i3/i3blocks-2.conf
-#	i3bar_command i3bar --transparency
-#	output HDMI-0
-#	position bottom
-#
+# 	font pango: Noto Sans Regular 10
+# 	status_command i3blocks -c ~/.config/i3/i3blocks-2.conf
+# 	i3bar_command i3bar --transparency
+# 	output HDMI-0
+# 	position bottom
+
 # When strip_workspace_numbers is set to yes,
 # any workspace that has a name of the form
 # “[n][:][NAME]” will display only the name.
-#strip_workspace_numbers yes
-##strip_workspace_name no
-#
-#	colors {
-#		separator          $purple
-#		background         $darkbluetrans
+# strip_workspace_numbers yes
+# #strip_workspace_name no
+
+# 	colors {
+# 		separator          $purple
+# 		background         $darkbluetrans
 #        	statusline         $white
-#					border		bg		txt		indicator
-#		focused_workspace	$lighterblue	$lighterblue	$darkblue	$purple
-#		active_workspace	$lightdblue	$lightdblue	$darkblue	$purple
-#		inactive_workspace	$darkblue	$darkblue	$lightdblue	$purple
-#		urgent_workspace	$urgentred	$urgentred	$white		$purple
-#	}
-#}
+# 					border		bg		txt		indicator
+# 		focused_workspace	$lighterblue	$lighterblue	$darkblue	$purple
+# 		active_workspace	$lightdblue	$lightdblue	$darkblue	$purple
+# 		inactive_workspace	$darkblue	$darkblue	$lightdblue	$purple
+# 		urgent_workspace	$urgentred	$urgentred	$white		$purple
+# 	}
+# }
 
 #####################################
 # Application menu handled by rofi / Launcher : #
@@ -622,3 +623,17 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l dim
 
 bindsym $mod+Shift+v exec --no-startup-id /home/alexis/.config/rofi/applets/bin/volume.sh > /dev/null
 bindsym $mod+Shift+q exec --no-startup-id /home/alexis/.config/rofi/applets/bin/battery.sh > /dev/null
+
+# Gnome GTK
+
+# Restore GNOME's settings
+exec --no-startup-id /usr/libexec/gnome-settings-daemon-localeexec
+
+# Fix a bug in gnome-settings-daemon: http://feeding.cloud.geek.nz/posts/creating-a-modern-tiling-desktop-environment-using-i3/
+exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/active false
+
+# Polybar
+exec --no-startup-id ~/.config/i3/scripts/launch_polybar.sh
+
+# Picom
+exec --no-startup-id picom -b

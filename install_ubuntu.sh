@@ -65,3 +65,12 @@ git clone git@github.com:adi1090x/rofi.git
 cd rofi
 chmod +x setup.sh
 ./setup.sh
+
+
+# TODO : GTK themes
+
+# Polybar
+
+echo "\033[1;32mInstalling Polybar...\033[0m"
+
+sudo apt install -y polybar
