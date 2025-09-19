@@ -41,7 +41,6 @@ sudo apt install -y \
 
 echo "\033[1;32mAdditional packages installation complete!\033[0m"
 
-
 # Install Betterlockscreen
 
 echo "\033[1;32mInstalling Betterlockscreen...\033[0m"
@@ -69,7 +68,6 @@ git clone git@github.com:adi1090x/rofi.git
 cd rofi
 chmod +x setup.sh
 ./setup.sh
-
 
 # TODO : GTK themes
 
