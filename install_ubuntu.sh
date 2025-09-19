@@ -83,3 +83,8 @@ sudo apt install -y polybar
 
 mkdir -p ~/.config
 cp -r $SCRIPT_DIR/.config/* ~/.config/
+cp -r $SCRIPT_DIR/.papes ~/.papes
+
+# TODO : install fonts
+
+cp -r $SCRIPT_DIR/.local ~/.local
