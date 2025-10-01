@@ -41,7 +41,6 @@ sudo apt install -y \
 
 echo "\033[1;32mAdditional packages installation complete!\033[0m"
 
-
 # Install Betterlockscreen
 
 echo "\033[1;32mInstalling Betterlockscreen...\033[0m"
@@ -70,7 +69,6 @@ cd rofi
 chmod +x setup.sh
 ./setup.sh
 
-
 # TODO : GTK themes
 
 # Polybar
@@ -83,3 +81,9 @@ sudo apt install -y polybar
 
 mkdir -p ~/.config
 cp -r $SCRIPT_DIR/.config/* ~/.config/
+
+cp -r $SCRIPT_DIR/.papes ~/.papes
+
+# TODO : install fonts
+
+cp -r $SCRIPT_DIR/.local ~/.local

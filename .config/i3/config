@@ -359,7 +359,7 @@ set $ws10 "10"
 #exec_always --no-startup-id picom -b
 #
 # for custom config:
-exec_always --no-startup-id picom --config  ~/.config/example.picom.conf
+# exec_always --no-startup-id picom --config  ~/.config/example.picom.conf
 
 #############################################
 # autostart applications/services on login: #
@@ -619,7 +619,7 @@ exec --no-startup-id caffeine
 
 # Transfer screen lock to betterlockscreen
 exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -u ~/.papes --blur 0.5 -- -f
-exec --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l dim
+exec_always --no-startup-id xss-lock --transfer-sleep-lock -- betterlockscreen -l dim
 
 bindsym $mod+Shift+v exec --no-startup-id /home/alexis/.config/rofi/applets/bin/volume.sh > /dev/null
 bindsym $mod+Shift+q exec --no-startup-id /home/alexis/.config/rofi/applets/bin/battery.sh > /dev/null
@@ -634,6 +634,8 @@ exec --no-startup-id dconf write /org/gnome/settings-daemon/plugins/cursor/activ
 
 # Polybar
 exec --no-startup-id ~/.config/i3/scripts/launch_polybar.sh
+
+bindsym $mod+Shift+b exec --no-startup-id killall polybar && ~/.config/i3/scripts/launch_polybar.sh
 
 # Picom
 exec --no-startup-id picom -b
