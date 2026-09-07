@@ -395,7 +395,7 @@ exec --no-startup-id ~/.screenlayout/monitor.sh
 # set wallpaper
 # exec --no-startup-id sleep 2 && nitrogen --restore
 #exec --no-startup-id sleep 1 && feh --bg-fill /usr/share/endeavouros/backgrounds/endeavouros-wallpaper.png
-exec_always --no-startup-id sleep 0.1 && cd ~/.papes && feh --bg-fill $(ls | shuf -n 1)
+exec_always --no-startup-id sleep 0.1 && cd ~/.papes && feh --bg-fill $(ls | shuf -n 3)
 
 # set powersavings for display:
 exec --no-startup-id xset s 480 dpms 600 600 600
@@ -639,3 +639,7 @@ bindsym $mod+Shift+b exec --no-startup-id killall polybar && ~/.config/i3/script
 
 # Picom
 exec --no-startup-id picom -b
+
+# tap + scroll
+exec --no-startup-id ~/.config/i3/scripts/invert-scroll.sh
+exec --no-startup-id ~/.config/i3/scripts/tap-to-click.sh
