@@ -272,7 +272,7 @@ label-background = ${colors.mid}
 
 [module/time]
 type = internal/date
-interval = 5
+interval = 1
 time = " %H:%M:%S  "
 label = %time%
 label-foreground = ${colors.light}

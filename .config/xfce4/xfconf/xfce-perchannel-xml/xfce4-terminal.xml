@@ -9,7 +9,7 @@
   <property name="color-cursor" type="string" value="#d3d3c6c6aaaa"/>
   <property name="color-cursor-use-default" type="bool" value="false"/>
   <property name="color-bold" type="string" value="#7fbaff"/>
-  <property name="color-palette" type="string" value="rgb(8,5,43);rgb(230,126,128);rgb(167,192,128);rgb(214,153,182);rgb(127,187,179);rgb(230,152,117);rgb(219,188,127);rgb(133,146,137);rgb(127,187,179);rgb(230,126,128);rgb(127,187,179);rgb(230,126,128);rgb(56,75,85);rgb(76,55,67);rgb(56,75,85);rgb(157,169,160)"/>
+  <property name="color-palette" type="string" value="rgb(8,5,43);rgb(230,126,128);rgb(167,192,128);rgb(214,153,182);rgb(127,187,179);rgb(230,152,117);rgb(219,188,127);rgb(133,146,137);rgb(127,187,179);rgb(230,126,128);rgb(127,187,179);rgb(230,126,128);rgb(56,75,85);rgb(214,153,182);rgb(56,75,85);rgb(157,169,160)"/>
   <property name="color-bold-is-bright" type="bool" value="false"/>
   <property name="font-name" type="string" value="Consolas 11"/>
   <property name="misc-always-show-tabs" type="bool" value="false"/>
@@ -18,7 +18,7 @@
   <property name="misc-borders-default" type="bool" value="true"/>
   <property name="misc-cursor-blinks" type="bool" value="false"/>
   <property name="misc-cursor-shape" type="string" value="TERMINAL_CURSOR_SHAPE_BLOCK"/>
-  <property name="misc-default-geometry" type="string" value="115x25"/>
+  <property name="misc-default-geometry" type="string" value="120x25"/>
   <property name="misc-inherit-geometry" type="bool" value="false"/>
   <property name="misc-menubar-default" type="bool" value="false"/>
   <property name="misc-mouse-autohide" type="bool" value="false"/>

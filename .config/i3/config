@@ -186,8 +186,8 @@ bindsym $mod+Shift+l exec --no-startup-id /home/alexis/.config/rofi/powermenu/ty
 # lock with a picture:
 #bindsym $mod+l exec i3lock -i  ~/.config/i3/i3-lock-screen.png -p default|win -t
 # lock by blurring the screen:
-# bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
-bindsym $mod+l exec betterlockscreen -l dim
+bindsym $mod+l exec ~/.config/i3/scripts/blur-lock
+# bindsym $mod+l exec betterlockscreen -l dim
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
